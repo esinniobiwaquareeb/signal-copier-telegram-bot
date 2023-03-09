@@ -145,7 +145,7 @@ def GetTradeInformation(update: Update, trade: dict, balance: float) -> None:
     # creates table with trade information
     table = CreateTable(trade, balance, stopLossPips, takeProfitPips)
     
-    # sends user trade information and calcualted risk
+    # sends user trade information and calculated risk
     update.effective_message.reply_text(f'<pre>{table}</pre>', parse_mode=ParseMode.HTML)
 
     return
@@ -162,7 +162,7 @@ def CreateTable(trade: dict, balance: float, stopLossPips: int, takeProfitPips: 
         a Pretty Table object that contains trade information
     """
 
-    # creates prettytable object
+    # creates pretty table object
     table = PrettyTable()
     
     table.title = "Trade Information"
@@ -412,7 +412,7 @@ def welcome(update: Update, context: CallbackContext) -> None:
         context: CallbackContext object that stores commonly used objects in handler callbacks
     """
 
-    welcome_message = "Welcome to the FX Signal Copier Telegram Bot! 💻💸\n\nYou can use this bot to enter trades directly from Telegram and get a detailed look at your risk to reward ratio with profit, loss, and calculated lot size. You are able to change specific settings such as allowed symbols, risk factor, and more from your personalized Python script and environment variables.\n\nUse the /help command to view instructions and example trades."
+    welcome_message = "Welcome to the FX Sultan Signal Copier Telegram Bot! 💻💸\n\nYou can use this bot to enter trades directly from Telegram and get a detailed look at your risk to reward ratio with profit, loss, and calculated lot size. You are able to change specific settings such as allowed symbols, risk factor, and more from your personalized Python script and environment variables.\n\nUse the /help command to view instructions and example trades."
     
     # sends messages to user
     update.effective_message.reply_text(welcome_message)
